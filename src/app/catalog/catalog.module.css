@@ -1,0 +1,150 @@
+.page {
+  min-height: 100vh;
+  padding: 44px 20px 70px;
+  background: #f5f7fb;
+}
+
+.container {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+.pageHeader {
+  margin-bottom: 28px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #5558d9;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.pageHeader h1 {
+  margin: 0;
+  color: #172033;
+  font-size: 38px;
+  letter-spacing: -0.035em;
+}
+
+.pageHeader p:not(.eyebrow) {
+  margin: 10px 0 0;
+  color: #687386;
+}
+
+.primaryLink,
+.backLink {
+  text-decoration: none;
+}
+
+.primaryLink {
+  min-height: 44px;
+  padding: 0 17px;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9px;
+  background: #5558d9;
+  color: #ffffff;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.backLink {
+  display: inline-block;
+  margin-bottom: 22px;
+  color: #5558d9;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.productCard {
+  padding: 22px;
+  border: 1px solid #dfe5ef;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 8px 25px rgba(20, 32, 55, 0.05);
+}
+
+.productCard h2 {
+  margin: 0;
+  color: #172033;
+  font-size: 19px;
+}
+
+.productStats {
+  margin: 18px 0;
+  display: flex;
+  gap: 12px;
+}
+
+.productStats span {
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: #f0f1ff;
+  color: #5053c4;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.editLink {
+  color: #5558d9;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.emptyState,
+.loadingState,
+.errorState {
+  padding: 50px 24px;
+  border: 1px solid #dfe5ef;
+  border-radius: 14px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.emptyState h2 {
+  margin: 0;
+}
+
+.emptyState p,
+.loadingState,
+.errorState {
+  color: #687386;
+}
+
+.emptyState .primaryLink {
+  margin-top: 14px;
+}
+
+@media (max-width: 850px) {
+  .productGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .page {
+    padding: 30px 12px 50px;
+  }
+
+  .pageHeader {
+    flex-direction: column;
+  }
+
+  .productGrid {
+    grid-template-columns: 1fr;
+  }
+}
