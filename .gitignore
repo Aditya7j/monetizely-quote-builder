@@ -22,3 +22,8 @@
 # OS files
 .DS_Store
 Thumbs.db
+
+# Playwright generated files
+/playwright-report/
+/test-results/
+/blob-report/

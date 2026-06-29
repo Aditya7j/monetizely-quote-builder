@@ -11,13 +11,25 @@ export default function HomePage() {
         <h1>SaaS Quote Builder</h1>
 
         <p>
-          Configure products and pricing tiers, then
-          create transparent customer quotes.
+          Configure products and pricing tiers,
+          then create transparent customer quotes.
         </p>
 
-        <Link className="homeButton" href="/catalog">
-          Open catalog setup
-        </Link>
+        <div className="homeActions">
+          <Link
+            className="homeButton"
+            href="/catalog"
+          >
+            Catalog setup
+          </Link>
+
+          <Link
+            className="homeButton secondaryHomeButton"
+            href="/quotes/new"
+          >
+            Create quote
+          </Link>
+        </div>
       </section>
     </main>
   );

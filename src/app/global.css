@@ -80,3 +80,18 @@ select {
   font-weight: 700;
   text-decoration: none;
 }
+
+.homeActions {
+  margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.homeActions .homeButton {
+  margin-top: 0;
+}
+
+.secondaryHomeButton {
+  background: #172033;
+}

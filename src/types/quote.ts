@@ -12,20 +12,8 @@ export interface SelectedAddOn {
   featureId: string;
   featureName: string;
   pricingModel: AddOnPricingModel;
-
-  /**
-   * Required for FIXED_MONTHLY and PER_SEAT_MONTHLY.
-   */
   priceCents?: number;
-
-  /**
-   * Required for PERCENT_OF_PRODUCT.
-   */
   percentage?: number;
-
-  /**
-   * Required for PER_SEAT_MONTHLY.
-   */
   quantity?: number;
 }
 
@@ -49,17 +37,29 @@ export interface QuotePricingInput {
 export interface QuoteCalculation {
   termMonths: number;
   termDiscountPercent: number;
-
   baseProductBeforeDiscountCents: number;
   termDiscountAmountCents: number;
   baseProductAmountCents: number;
-
   addOnTotalCents: number;
   subtotalCents: number;
-
   quoteDiscountPercent: number;
   quoteDiscountAmountCents: number;
-
   totalCents: number;
   lineItems: QuoteLineItem[];
+}
+
+export interface QuoteAddOnInput {
+  featureId: string;
+  quantity?: number;
+}
+
+export interface CreateQuoteInput {
+  quoteName: string;
+  customerName: string;
+  productId: string;
+  tierId: string;
+  productSeats: number;
+  term: QuoteTerm;
+  selectedAddOns: QuoteAddOnInput[];
+  quoteDiscountPercent: number;
 }
