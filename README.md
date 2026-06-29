@@ -6,7 +6,7 @@ The application allows an analyst to configure a SaaS product catalog with multi
 
 ## Live Application
 
-`YOUR_VERCEL_URL`
+`https://monetizely-quote-builder-smoky.vercel.app/`
 
 ## GitHub Repository
 
